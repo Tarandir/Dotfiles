@@ -2,7 +2,8 @@
 
 
 Notable features:
-transparent Thunar
+
+Transparent Thunar
 
 Waybar with 
 - Menu,
