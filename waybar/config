@@ -7,7 +7,7 @@
   "modules-right": ["pulseaudio","bluetooth","custom/pwroff"],
 
   "custom/menu": {
-    "format": "  ",             // Change icon if you want
+    "format": "  ",             
     "on-click": "wofi --show drun",
     "tooltip": false
   },
@@ -23,6 +23,7 @@
     "format-off": " off",
     "format-disabled": " off",
     "tooltip": true
+    "on-click": "bluetoothctl connect BLUETOOTH-DEVICE-ADDRESS-HERE"
   },
 
   "pulseaudio": {
