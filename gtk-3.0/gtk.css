@@ -1,0 +1,52 @@
+/* =======================================
+   Thunar GTK3 Override
+   Semi-transparent window + opaque icons
+   ======================================= */
+
+/* --- Base window --- */
+ThunarWindow, .thunar-window {
+    background-color: rgba(40, 42, 54, 0.5); /* semi-transparent tokyonight dark */
+    background-image: none;
+}
+
+/* --- Headerbar / toolbar --- */
+HeaderBar, .header-bar {
+    background-color: rgba(40, 42, 54, 0.5);
+}
+
+/* --- Folder view / treeview --- */
+.view, .view .treeview, .view .viewport {
+    background-color: transparent; /* let window transparency show */
+    color: #c0caf5; /* text color */
+}
+
+/* --- Rows --- */
+.view .treeview row {
+    background-color: transparent;
+}
+
+.view .treeview row:selected {
+    background-color: rgba(98, 114, 164, 0.3);
+    color: #ffffff;
+}
+
+/* --- Icons / text fully opaque --- */
+image, icon, .view * {
+    opacity: 1 !important;
+}
+
+/* --- Scrollbars --- */
+scrollbar slider {
+    background-color: rgba(139, 186, 255, 0.4);
+    border-radius: 8px;
+}
+
+scrollbar trough {
+    background-color: transparent;
+}
+
+/* --- Remove borders --- */
+frame, frame > border {
+    border: none;
+}
+

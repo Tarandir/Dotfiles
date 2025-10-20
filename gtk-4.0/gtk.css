@@ -1,0 +1,62 @@
+/* 1) EVERYTHING OPAQUE BY DEFAULT */
+* {
+    opacity: 1 !important;
+    background-color: #282a36 !important;  /* base color (same as tokyonight-ish) */
+    background-image: none !important;
+}
+
+/* 2) NOW make only the main content area semi-transparent */
+window,
+.thunar-window,
+.thunar-window > box,
+.thunar-window > box > stack,
+.thunar-window > box > stack > box {
+    background-color: rgba(40, 42, 54, 0.5) !important; /* desired transparency */
+}
+
+/* 3) Headerbar semi-transparent */
+headerbar,
+headerbar * {
+    background-color: rgba(40, 42, 54, 0.5) !important;
+}
+
+/* 4) Sidebar / tree view transparent to show background */
+.view {
+    background-color: transparent !important;
+    color: #c0caf5 !important;
+}
+
+/* 5) Rows */
+.view row {
+    background-color: transparent !important;
+}
+
+.view row:selected {
+    background-color: rgba(98, 114, 164, 0.3) !important;
+    color: #ffffff !important;
+}
+
+/* 6) Icons/text already opaque from step 1 */
+image,
+icon,
+label,
+.view * {
+    opacity: 1 !important;
+}
+
+/* 7) Scrollbars */
+scrollbar slider {
+    background-color: rgba(139, 186, 255, 0.4) !important;
+    border-radius: 8px;
+}
+
+scrollbar trough {
+    background-color: transparent !important;
+}
+
+/* 8) Remove borders */
+frame,
+frame > border {
+    border: none !important;
+}
+
