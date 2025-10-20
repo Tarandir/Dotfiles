@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Your OpenWeatherMap API key
-API_KEY="4a974ed311e9d9b3274094820077e685"
+API_KEY="nah-ah"
 # Your city ID (you can get it from https://openweathermap.org/find)
-CITY_ID="1508291"
+CITY_ID="nununu"
 
 # Fetch weather (current temperature + description)
 weather=$(curl -s "https://api.openweathermap.org/data/2.5/weather?id=$CITY_ID&appid=$API_KEY&units=metric")
