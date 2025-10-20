@@ -1,0 +1,68 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": ["custom/menu","custom/weather"],
+  "modules-center": ["clock"],
+  "modules-right": ["hyprland/workspaces","pulseaudio","bluetooth","custom/pwroff"],
+
+  "custom/menu": {
+    "format": "  ",             // Change icon if you want
+    "on-click": "wofi --show drun",
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "{:%A, %d %B  %H:%M}",
+    "tooltip": false
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-off": " off",
+    "format-disabled": " off",
+    "tooltip": true,
+    "on-click": "bluetoothctl connect 6C:21:A2:75:A9:23"
+  },
+
+  "pulseaudio": {
+  "format": " {volume}%",         // icon + %
+  "format-muted": " muted",       // icon when muted
+  "scroll-step": 5,                // volume change by scroll
+  "tooltip": true
+   },
+
+   "custom/pwroff": {
+    "format": "⏻",                     // power icon
+    "tooltip": "Power off",
+    "on-click": "shutdown now"
+    },
+
+    
+    "custom/weather": {
+    "exec": "~/.config/waybar/weather.sh",
+    "interval": 600,
+    "format": "{}",
+    "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+        "1": "",     // Terminal
+        "2": "",     // Browser
+        "3": "",     // Music
+        "4": "",     // Files
+        "default": ""   // Other
+    },
+     "persistent-workspaces": {
+        "*": 4      // show 1..4 on ALL monitors
+    },
+    "on-click": "activate",
+"on-scroll-up": "hyprctl dispatch workspace +1",
+"on-scroll-down": "hyprctl dispatch workspace -1"
+    }
+}
+
+
