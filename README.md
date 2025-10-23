@@ -1,5 +1,5 @@
+<img width="1920" height="1080" alt="2025-10-23-173958_hyprshot" src="https://github.com/user-attachments/assets/f89aa107-89c3-4127-bbce-041857ee226d" />
 
-<img width="1920" height="1080" alt="2025-10-20-211356_hyprshot" src="https://github.com/user-attachments/assets/c5fd062a-0196-41f0-b21d-5fd3577225e7" />
 
 
 Notable features:
