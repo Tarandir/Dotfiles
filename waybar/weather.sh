@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-API_KEY="4a974ed311e9d9b3274094820077e685"
-CITY_ID="1508291"
+API_KEY="nununu"
+CITY_ID="nununu"
 
 # --- CURRENT WEATHER ---
 weather=$(curl -s "https://api.openweathermap.org/data/2.5/weather?id=$CITY_ID&appid=$API_KEY&units=metric")
