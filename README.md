@@ -16,3 +16,6 @@ Waybar with
 - Bluetooth status and connect button
 - Keyboard layout indicator
 - Poweroff button
+
+Autostart windows for workspaces
+Autostart Num bor both the Login screen and the Session itself
