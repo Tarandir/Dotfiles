@@ -70,13 +70,14 @@
     "exec": "~/.config/waybar/wg_status.sh",
     "interval": 5,
     "return-type": "json",
-    "tooltip": "WireGuard VPN"
+    "tooltip": "WireGuard VPN",
+    "on-click": "~/.config/waybar/wg_toggle.sh"
 },
 
 "custom/yt_handle": {
     "interval": 300,
     "exec": "~/.config/waybar/youtube-handle-check.sh",
-    "on-click": "xdg-open https://studio.youtube.com/channel/UC1wF62-GHkchWRLYs2JP9Qg/editing/profile",
+    "on-click": "xdg-open https://studio.youtube.com/channel",
     "return-type": "json",
     "tooltip": true
 },
@@ -84,7 +85,7 @@
   "custom/minecraft-name": {
     "exec": "~/.config/waybar/mc-name-checker.sh",
     "interval": 300,
-     "on-click":  "xdg-open https://www.minecraft.net/ru-ru/login",
+     "on-click":  "xdg-open https://www.minecraft.net",
     "return-type": "json"
   }
 }
