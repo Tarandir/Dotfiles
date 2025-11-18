@@ -2,9 +2,9 @@
   "layer": "top",
   "position": "top",
 
-  "modules-left": ["custom/menu","custom/weather","custom/wireguard"],
+  "modules-left": ["custom/menu","custom/yt_handle","custom/minecraft-name","custom/weather"],
   "modules-center": ["clock"],
-  "modules-right": ["hyprland/workspaces","pulseaudio","bluetooth","custom/language","custom/pwroff"],
+  "modules-right": ["hyprland/workspaces","custom/wireguard","custom/btvol","custom/language","custom/pwroff"],
 
   "custom/menu": {
     "format": "  ",
@@ -17,21 +17,16 @@
     "tooltip": false
   },
 
-  "bluetooth": {
-    "format": " {status}",
-    "format-connected": " {device_alias}",
-    "format-off": " off",
-    "format-disabled": " off",
-    "tooltip": true,
-    "on-click": "bluetoothctl connect 6C:21:A2:75:A9:23"
-  },
-
-  "pulseaudio": {
-  "format": " {volume}%",         // icon + %
-  "format-muted": " muted",       // icon when muted
-  "scroll-step": 5,                // volume change by scroll
-  "tooltip": true
-   },
+"custom/btvol": {
+    "exec": "~/.config/waybar/bt-volume-module.sh",
+    "return-type": "json",
+    "interval": 3,
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 waybar",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 waybar",
+    "on-click": "bluetoothctl connect <PLACE_MAC_ADDRESS_HERE>",
+    "signal": 10,
+    "tooltip": true
+},
 
    "custom/pwroff": {
     "format": "⏻",                     // power icon
@@ -52,12 +47,13 @@
     "format-icons": {
         "1": "",     // Browser
         "2": "",     // Terminal
-        "3": "",     // Music
-        "4": "󰺵",     // Gaming
+        "3": "󰺵",     // Gaming
+        "4": "",     // Terminal for steam
+        "5": "",     // Music
         "default": ""   // Other
     },
      "persistent-workspaces": {
-        "*": 4      // show 1..4 on ALL monitors
+        "*": 5      // show 1..5 on ALL monitors
     },
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace +1",
@@ -73,10 +69,25 @@
 "custom/wireguard": {
     "exec": "~/.config/waybar/wg_status.sh",
     "interval": 5,
-    "format": "{}",
+    "return-type": "json",
     "tooltip": "WireGuard VPN"
-}
+},
 
+"custom/yt_handle": {
+    "interval": 300,
+    "exec": "~/.config/waybar/youtube-handle-check.sh",
+    "on-click": "xdg-open https://studio.youtube.com/channel/UC1wF62-GHkchWRLYs2JP9Qg/editing/profile",
+    "return-type": "json",
+    "tooltip": true
+},
+
+  "custom/minecraft-name": {
+    "exec": "~/.config/waybar/mc-name-checker.sh",
+    "interval": 300,
+     "on-click":  "xdg-open https://www.minecraft.net/ru-ru/login",
+    "return-type": "json"
+  }
+}
 
 }
 
