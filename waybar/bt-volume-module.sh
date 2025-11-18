@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-TARGET_MAC="6C:21:A2:75:A9:23"
-CUSTOM_ALIAS=" Yandex Station"
+TARGET_MAC="MAC_ADDRESS_THAT_YOU_WANT_TO_CHANGE_THE_ALIAS_OF"
+CUSTOM_ALIAS="NEW_ALIAS"
 
 # Get volume (0–100)
 VOLUME=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}' | tr -d '%')
