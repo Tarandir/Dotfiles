@@ -1,11 +1,6 @@
 <img width="1920" height="1080" alt="2025-10-23-173958_hyprshot" src="https://github.com/user-attachments/assets/f89aa107-89c3-4127-bbce-041857ee226d" />
 
 
-
-Notable features:
-
-Transparent Thunar
-
 # Waybar
 + **Menu  **
 can be left as is
@@ -30,3 +25,4 @@ click to shutdown
 Change MAC for the BT speaker in **Auto-Start**  
 Change Keyboard lauyouts and toggle keys in the hyprland conf in **Input**  
 Change hyprpaper and printscreen keybindings in **Keybindings**  
+Transparent Thunar is controlled via `windowrulev2 = opacity 0.6 0.6,class:^(thunar)$` in **Evironment variables**
