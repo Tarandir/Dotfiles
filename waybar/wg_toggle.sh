@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WG_INTERFACE="phone"
+WG_INTERFACE="YOUR_WG_INTERFACE_HERE"
 
 # Check if interface exists and is up
 if ip link show "$WG_INTERFACE" &>/dev/null; then
