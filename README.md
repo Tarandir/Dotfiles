@@ -14,9 +14,9 @@ replace the placeholders with the Open Weather API and the city number
 + **Workspaces**  
 adjust the number of and the icons for the workspaces, also check Hyprland conf to change auto-launched apps on boot
 + **WireGuard status**  
-replace the name of the WG interface to your conf name in /etc/wireguard/  
+replace the name of the WG interface in wg_status.sh and in wg_toggle.sh to your conf name in /etc/wireguard/  
 Optional: ``sudo EDITOR=nano visudo``  
-``<YOUR_USERNAME_HERE> ALL=(ALL) NOPASSWD: /usr/bin/wg-quick up <YOUR_WG+INTERFACE_HERE>, /usr/bin/wg-quick down <YOUR_WG+INTERFACE_HERE>``
+``<YOUR_USERNAME_HERE> ALL=(ALL) NOPASSWD: /usr/bin/wg-quick up <YOUR_WG_INTERFACE_HERE>, /usr/bin/wg-quick down <YOUR_WG+INTERFACE_HERE>``
 + **Bluetooth and Volume control**  
 replace the Mac address and trhe alt Alias if you want a custom alias for that specific device. Scroll on the module to change volume
 + **Keyboard layout indicator**  
