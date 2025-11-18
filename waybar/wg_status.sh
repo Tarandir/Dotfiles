@@ -1,5 +1,5 @@
 # Your WireGuard interface name
-WG_INTERFACE="phone"
+WG_INTERFACE="YOUR_WG_INTERFACE_NAME_HERE"
 
 # Check if the interface exists and has peers
 if ip link show "$WG_INTERFACE" &>/dev/null; then
