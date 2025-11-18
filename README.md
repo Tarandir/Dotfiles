@@ -1,4 +1,5 @@
-<img width="1920" height="1080" alt="2025-10-23-173958_hyprshot" src="https://github.com/user-attachments/assets/f89aa107-89c3-4127-bbce-041857ee226d" />
+
+<img width="1920" height="1080" alt="2025-11-18-223518_hyprshot" src="https://github.com/user-attachments/assets/9375490d-e111-4cd6-bbad-3b2c11cb9c83" />
 
 
 # Waybar
