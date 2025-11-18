@@ -25,3 +25,8 @@ replace the Mac address and trhe alt Alias if you want a custom alias for that s
 Toggle is set to Shift+Alt
 ## Power Off button
 click to shutdown
+
+# HL Config
+Change MAC for the BT speaker in Auto-Start
+Change Keyboard lauyouts and toggle keys in the hyprland conf in Input
+Change hyprpaper and printscreen keybindings in Keybindings
