@@ -57,5 +57,5 @@ case $desc_tomorrow in
 esac
 
 # --- OUTPUT FORMAT FOR WAYBAR ---
-echo "${temp_now}°C $icon_now $desc_now | Tomorrow: $icon_tomorrow $desc_tomorrow ${min_temp}°/${max_temp}°C"
+echo "${temp_now}°C $icon_now $desc_now | TM: $icon_tomorrow $desc_tomorrow ${min_temp}°/${max_temp}°C"
 
