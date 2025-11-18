@@ -6,16 +6,22 @@ Notable features:
 
 Transparent Thunar
 
-Waybar with 
-- Menu,
-- Weather for today and tomorrow
-- ireguard VPN indicator
-- Date and time
-- Workspace switch
-- Volume control
-- Bluetooth status and connect button
-- Keyboard layout indicator
-- Poweroff button
-
-Autostart windows for workspaces
-Autostart Num bor both the Login screen and the Session itself
+# Waybar
+## Menu
+can be left as is
+## Youtube handle availability checker
+replace the placeholder with your desired handle to be notified when it becomes available
+## MC:JE username availability checker
+replace the placeholder with your desired username to be notified when it becomes available
+## Weather and time
+replace the placeholders with the Open Weather API and the city number
+## Workspaces
+adjust the number of and the icons for the workspaces, also check Hyprland conf to change auto-launched apps on boot
+## WireGuard status
+replace the name of the WG interface to your conf name in /etc/wireguard/
+## Bluetooth and Volume control
+replace the Mac address and trhe alt Alias if you want a custom alias for that specific device. Scroll on the module to change volume
+## Keyboard layout indicator
+Toggle is set to Shift+Alt
+## Power Off button
+click to shutdown
