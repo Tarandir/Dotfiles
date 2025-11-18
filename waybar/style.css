@@ -20,12 +20,15 @@ window#waybar {
 #custom-weather,
 #workspaces,
 #custom-language,
-#custom-wireguard {
+#custom-wireguard,
+#custom-yt_handle,
+#custom-minecraft-name,
+#custom-btvol {
     background: rgba(87, 58, 153, 0.2); /* semi-transparent purple */
     border: 1px solid #8beaff;          /* light blue border */
     border-radius: 20px;
-    margin: 9px 10px 0px 10px; /* TRBL around modules */
-    padding: 0px 20px; /* TS inside border */
+    margin: 9px 8px 0px 8px; /* TRBL around modules */
+    padding: 0px 18px; /* TS inside border */
 }
 
 /* Make center text bold */
@@ -35,7 +38,10 @@ window#waybar {
 #custom-pwroff,
 #custom-weather,
 #custom-language,
-#custom-wireguard {
+#custom-wireguard,
+#custom-yt_handle,
+#custom-minecraft-name,
+#custom-btvol {
     font-weight: bold;
 }
 
@@ -57,4 +63,16 @@ window#waybar {
 }
 #workspaces button.active {
     opacity: 1;
+}
+
+
+#custom-yt_handle.free,
+#custom-minecraft-name.free {
+    color: #88ff88; /* green */ /*BOTH are free vs taken*/
+}
+
+#custom-yt_handle.taken,
+#custom-minecraft-name.taken,
+#custom-wireguard.off {
+    color: rgba(255, 255, 255, 0.4);
 }
