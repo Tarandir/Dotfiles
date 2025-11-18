@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-USERNAME="Kotarina"   # change to the name you want to monitor
+USERNAME="DESIRED_NAME_HERE"   # change to the name you want to monitor
 
 API="https://api.mojang.com/users/profiles/minecraft/$USERNAME"
 RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" "$API")
