@@ -27,6 +27,6 @@ Toggle is set to Shift+Alt
 click to shutdown
 
 # HL Config
-Change MAC for the BT speaker in Auto-Start
-Change Keyboard lauyouts and toggle keys in the hyprland conf in Input
-Change hyprpaper and printscreen keybindings in Keybindings
+Change MAC for the BT speaker in Auto-Start  
+Change Keyboard lauyouts and toggle keys in the hyprland conf in Input  
+Change hyprpaper and printscreen keybindings in Keybindings  
