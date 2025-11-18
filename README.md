@@ -3,7 +3,7 @@
 
 
 # Waybar
-+ **Menu  **
++ **Menu**  
 can be left as is
 + **Youtube handle availability checker**  
 replace the placeholder with your desired handle to be notified when it becomes available
