@@ -16,11 +16,11 @@ alias neofetch='fastfetch'
 alias chrome='google-chrome-stable'
 alias hlc='nvim ~/.config/hypr/hyprland.conf'
 alias bash='nvim ~/.bashrc'
-alias bt='bluetoothctl connect <MAC_HERE_NO_BRACKETS>'
+alias bt='bluetoothctl connect 6C:21:A2:75:A9:23'
 alias clr='clear'
 alias rwb='~/.config/waybar/launch.sh'
-alias vpn='sudo resolvconf -u && sudo wg-quick up <YOUR_WG_INTERFACE_HERE>'
-alias vpno='sudo wg-quick down <YOUR_WG_INTERFACE_HERE> && echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" | sudo resolvconf -a enp7s0 && sudo resolvconf -u'
+alias vpn='sudo resolvconf -u && sudo wg-quick up phone'
+alias vpno='sudo wg-quick down phone && echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" | sudo resolvconf -a enp7s0 && sudo resolvconf -u'
 alias wbc='nvim ~/.config/waybar/config'
 alias wbcss='nvim ~/.config/waybar/style.css'
 alias fixnet='echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" | sudo resolvconf -a enp7s0 && sudo resolvconf -u'
@@ -28,8 +28,14 @@ alias tg='telegram-desktop'
 alias usbmount='sudo mount /dev/sdb1 /mnt/usbdrive'
 alias logout='hyprctl dispatch exit'
 alias wtf='wtfutil'
+alias untar='tar -xvf'
+alias upd='sudo pacman -Syu'
+alias rhp='~/.config/hypr/relaunch_paper.sh'
+alias kawb="killall waybar" 
 # Created by `pipx` on 2025-11-11 14:07:33
 export PATH="$PATH:/home/tar/.local/bin"
 
-# Added for Starship by Tar
+# Adde3d for Starship by Tar
 eval "$(starship init bash)"
+
+source '/home/tar/.bash_completions/comfy.sh'
