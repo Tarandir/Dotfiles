@@ -1,13 +1,17 @@
-#!/usr/bin/env bash
+#!/bin/bash
+IFACE="YOUR_INTERFACE_HERE"
 
-WG_INTERFACE="YOUR_WG_INTERFACE_HERE"
+# Authenticate once and cache the sudo session, so later commands
+# don't each need a piped password (which would fight with the DNS pipe below).
+echo <I_M_RISKY> | sudo -S -v
 
-# Check if interface exists and is up
-if ip link show "$WG_INTERFACE" &>/dev/null; then
-    # Turn it off
-    sudo wg-quick down "$WG_INTERFACE"
+if ip link show "$IFACE" &>/dev/null; then
+    sudo wg-quick down "$IFACE"
+    printf 'nameserver 1.1.1.1\nnameserver 8.8.8.8\n' | sudo resolvconf -a enp7s0
+    sudo resolvconf -u
 else
-    # Turn it on
-    sudo wg-quick up "$WG_INTERFACE"
+    sudo resolvconf -u
+    sudo wg-quick up "$IFACE"
 fi
 
+pkill -RTMIN+8 waybar
