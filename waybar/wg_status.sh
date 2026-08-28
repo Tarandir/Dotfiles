@@ -9,14 +9,19 @@ if ip link show "$WG_INTERFACE" &>/dev/null; then
         # Interface exists, show it as ON
         ICON=""
         STATUS="ON"
+	CLASS="on"
+
     else
         ICON="󰒘"  # Up but no peers yet
         STATUS="ON"
+	CLASS="on"
     fi
 else
     ICON="󰦞"
     STATUS="OFF"
+    CLASS="off"
 fi
 
 # Output for Waybar
-echo "$ICON $STATUS"
+echo "{ \"text\": \"$ICON    $STATUS\", \"class\": \"$CLASS\" }"
+
