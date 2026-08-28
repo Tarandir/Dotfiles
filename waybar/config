@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
 
-  "modules-left": ["custom/menu","custom/yt_handle","custom/minecraft-name","custom/weather"],
+  "modules-left": ["custom/menu","custom/yt_handle","custom/minecraft-name","custom/tg","custom/weather"],
   "modules-center": ["clock"],
   "modules-right": ["hyprland/workspaces","custom/wireguard","custom/btvol","custom/language","custom/pwroff"],
 
@@ -13,7 +13,7 @@
   },
 
   "clock": {
-    "format": "{:%A, %d %B | %H:%M}",
+    "format": "{:%A,  %d  %B  | %H:%M}",
     "tooltip": false
   },
 
@@ -23,7 +23,7 @@
     "interval": 3,
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 waybar",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 waybar",
-    "on-click": "bluetoothctl connect <PLACE_MAC_ADDRESS_HERE>",
+    "on-click": "bluetoothctl connect <YOUR_MAC_HERE>",
     "signal": 10,
     "tooltip": true
 },
@@ -37,10 +37,12 @@
     
     "custom/weather": {
     "exec": "~/.config/waybar/weather.sh",
-    "interval": 600,
+    "on-click": "pkill -RTMIN+9 waybar",
+    "interval": 300,
+    "signal": 9,
     "format": "{}",
     "tooltip": false
-    },
+},
 
     "hyprland/workspaces": {
     "format": "{icon}",
@@ -56,8 +58,8 @@
         "*": 5      // show 1..5 on ALL monitors
     },
     "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace +1",
-    "on-scroll-down": "hyprctl dispatch workspace -1"
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"+1\" })'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"-1\" })'"
     },
 
 "custom/language": {
@@ -70,24 +72,32 @@
     "exec": "~/.config/waybar/wg_status.sh",
     "interval": 5,
     "return-type": "json",
-    "tooltip": "WireGuard VPN",
-    "on-click": "~/.config/waybar/wg_toggle.sh"
+    "on-click": "~/.config/waybar/wg_toggle.sh",
+    "signal": 8,
+    "tooltip": "WireGuard VPN"
 },
 
 "custom/yt_handle": {
-    "interval": 300,
+    "interval": 100,
     "exec": "~/.config/waybar/youtube-handle-check.sh",
-    "on-click": "xdg-open https://studio.youtube.com/channel",
+    "on-click": "xdg-open https://studio.youtube.com/channel/<YOUR_CHANNEL_HERE>/editing/profile",
     "return-type": "json",
     "tooltip": true
 },
 
   "custom/minecraft-name": {
     "exec": "~/.config/waybar/mc-name-checker.sh",
-    "interval": 300,
-     "on-click":  "xdg-open https://www.minecraft.net",
+    "interval": 10,
+     "on-click":  "xdg-open https://www.minecraft.net/ru-ru/login",
     "return-type": "json"
-  }
+  },
+
+"custom/tg": {
+    "format": " ",
+    "on-click": "Telegram -- %u"
+}
+
+
 }
 
 }
