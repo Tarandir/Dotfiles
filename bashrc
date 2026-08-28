@@ -16,7 +16,7 @@ alias neofetch='fastfetch'
 alias chrome='google-chrome-stable'
 alias hlc='nvim ~/.config/hypr/hyprland.conf'
 alias bash='nvim ~/.bashrc'
-alias bt='bluetoothctl connect <bluetooth_address_here>'
+alias bt='bluetoothctl connect <YOUR_MAC_HERE>'
 alias clr='clear'
 alias rwb='~/.config/waybar/launch.sh'
 alias vpn='sudo resolvconf -u && sudo wg-quick up phone'
@@ -31,7 +31,8 @@ alias wtf='wtfutil'
 alias untar='tar -xvf'
 alias upd='sudo pacman -Syu'
 alias rhp='~/.config/hypr/relaunch_paper.sh'
-alias kawb="killall waybar" 
+alias kawb="killall waybar"
+alias мзт="sudo resolvconf -u && sudo wg-quick up phone"
 # Created by `pipx` on 2025-11-11 14:07:33
 export PATH="$PATH:/home/tar/.local/bin"
 
