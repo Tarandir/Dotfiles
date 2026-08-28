@@ -26,7 +26,7 @@ click to shutdown
 
 # HL Config
 Change MAC for the BT speaker in **Auto-Start**  
-Change Keyboard lauyouts and toggle keys in the hyprland conf in **Input**  
+Change Keyboard layouts and toggle keys in the hyprland conf in **Input**  
 Change hyprpaper and printscreen keybindings in **Keybindings**  
 Transparent Thunar is controlled via `windowrulev2 = opacity 0.6 0.6,class:^(thunar)$` in **Evironment variables**
 
