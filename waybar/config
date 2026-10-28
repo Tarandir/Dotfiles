@@ -4,7 +4,7 @@
 
   "modules-left": ["custom/menu","custom/yt_handle","custom/minecraft-name","custom/tg","custom/weather"],
   "modules-center": ["clock"],
-  "modules-right": ["hyprland/workspaces","custom/wireguard","custom/btvol","custom/language","custom/pwroff"],
+  "modules-right": ["custom/webcam","hyprland/workspaces","custom/wireguard","custom/btvol","custom/language","custom/pwroff"],
 
   "custom/menu": {
     "format": "  ",
@@ -23,7 +23,7 @@
     "interval": 3,
     "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 waybar",
     "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 waybar",
-    "on-click": "bluetoothctl connect <YOUR_MAC_HERE>",
+    "on-click": "bluetoothctl connect 6C:21:A2:75:A9:23",
     "signal": 10,
     "tooltip": true
 },
@@ -81,8 +81,17 @@
 "custom/yt_handle": {
     "interval": 100,
     "exec": "~/.config/waybar/youtube-handle-check.sh",
-    "on-click": "xdg-open https://studio.youtube.com/channel/<YOUR_CHANNEL_HERE>/editing/profile",
+    "on-click": "xdg-open https://studio.youtube.com/channel/UC1wF62-GHkchWRLYs2JP9Qg/editing/profile",
     "return-type": "json",
+    "tooltip": true
+},
+
+"custom/webcam": {
+    "exec": "~/.config/waybar/webcam_status.sh",
+    "return-type": "json",
+    "interval": 5,
+    "on-click": "~/.config/waybar/webcam_toggle.sh",
+    "signal": 11,
     "tooltip": true
 },
 
@@ -91,16 +100,8 @@
     "interval": 10,
      "on-click":  "xdg-open https://www.minecraft.net/ru-ru/login",
     "return-type": "json"
-  },
-
-"custom/tg": {
-    "format": " ",
-    "on-click": "Telegram -- %u"
-}
+  }
 
 
 }
-
-}
-
 
