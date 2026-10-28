@@ -11,6 +11,8 @@ replace the placeholder with your desired handle to be notified when it becomes 
 replace the placeholder with your desired username to be notified when it becomes available
 + **Weather and time**  
 replace the placeholders with the Open Weather API and the city number
++ **DSLR Webcam**
+toggles and shows the status of the DSLR camera as a webcam
 + **Workspaces**  
 adjust the number of and the icons for the workspaces, also check Hyprland conf to change auto-launched apps on boot
 + **WireGuard status**  
