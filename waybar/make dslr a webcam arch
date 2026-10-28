@@ -1,0 +1,27 @@
+sudo pacman -S --needed gphoto2 v4l2loopback-dkms v4l2loopback-utils ffmpeg linux-headers
+
+sudo modprobe v4l2loopback exclusive_caps=1 max_buffers=2
+
+gphoto2 --auto-detect
+
+gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video2
+
+if failed, then
+
+v4l2-ctl --list-devices
+Look for the “Dummy video device” or v4l2loopback entry.
+
+sudo modprobe -r v4l2loopback
+sudo modprobe v4l2loopback video_nr=2 card_label="Canon DSLR" exclusive_caps=1 max_buffers=2
+ls /dev/video2
+
+run the stream
+gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video2
+
+f gphoto2 later complains the device is busy or can’t be claimed, something like gvfs has grabbed the camera:
+pkill -f gvfs-gphoto2-volume-monitor
+
+
+To make the loopback device persistent across reboots:
+echo v4l2loopback | sudo tee /etc/modules-load.d/v4l2loopback.conf
+echo 'options v4l2loopback video_nr=2 card_label="Canon DSLR" 
