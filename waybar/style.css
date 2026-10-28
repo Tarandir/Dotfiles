@@ -23,7 +23,9 @@ window#waybar {
 #custom-wireguard,
 #custom-yt_handle,
 #custom-minecraft-name,
-#custom-btvol {
+#custom-btvol,
+#custom-tg,
+#custom-webcam {
     background: rgba(87, 58, 153, 0.2); /* semi-transparent purple */
     border: 1px solid #8beaff;          /* light blue border */
     border-radius: 20px;
@@ -41,7 +43,8 @@ window#waybar {
 #custom-wireguard,
 #custom-yt_handle,
 #custom-minecraft-name,
-#custom-btvol {
+#custom-btvol, 
+#custom-webcam {
     font-weight: bold;
 }
 
@@ -50,7 +53,8 @@ window#waybar {
 #custom-pwroff:hover,
 #bluetooth:hover,
 #workspaces:hover,
-#pulseaudio:hover {
+#pulseaudio:hover,
+#custom-webcam:hover {
     background: rgba(140, 70, 200, 0.5);
 }
 
@@ -73,6 +77,10 @@ window#waybar {
 
 #custom-yt_handle.taken,
 #custom-minecraft-name.taken,
-#custom-wireguard.off {
+#custom-wireguard.off,
+#custom-weather.grey {
     color: rgba(255, 255, 255, 0.4);
 }
+
+#custom-webcam.on  { color: #a6e3a1; }
+#custom-webcam.off { color: #6c7086; }
